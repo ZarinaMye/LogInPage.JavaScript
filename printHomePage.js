@@ -44,7 +44,7 @@ export default function printHomePage () {
     logInBtn.addEventListener("click", () =>  {   
 
         let users = JSON.parse(localStorage.getItem("users"));
-        let user = users.map/*find*/(user => user.userName === inputUserName.value);//  && user.passWord === inputPassWord.value);
+        let user = users.find(user => user.userName === inputUserName.value);//  && user.passWord === inputPassWord.value);
         
          //kolla password också..!!
         
