@@ -44,8 +44,8 @@ export default function printHomePage () {
     logInBtn.addEventListener("click", () =>  {   
 
         let users = JSON.parse(localStorage.getItem("users"));
-        let user = users.find(user => user.userName === inputUserName.value);// && user.passWord === inputPassWord.value);
-        //let user = users.find(user => user.userName === inputUserName.value); // && user.passWord === inputPassWord.value);
+        let user = users.map/*find*/(user => user.userName === inputUserName.value);//  && user.passWord === inputPassWord.value);
+        
          //kolla password också..!!
         
         if (user) { 
@@ -53,7 +53,6 @@ export default function printHomePage () {
             let userIsLoggedIn = inputUserName.value; // || inputNewUserName.value;
             localStorage.setItem("userIsLoggedIn", JSON.stringify(userIsLoggedIn)); 
             printMemberPage(); 
-    
         }
         else  {
             printWrongPage (); 

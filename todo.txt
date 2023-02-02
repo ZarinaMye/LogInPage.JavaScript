@@ -1,0 +1,5 @@
+Ny användare fungerar i chrome men ej i firefox o edge..?
+Kolla lösenord också vid inloggad
+krav vid skapandet av ny medlemm, ex mellan 4 och 10 tecken bla...
+lägg till en todolist för medlemmarna så de kan skriva i den..
+css
