@@ -48,9 +48,9 @@ export default function createNewMember () {
                 
             //ändra 
             let newMember = {    
-                userId: users.length ++,
+                userId: users.length +1,
                 userName: inputNewUserName.value,
-                passWord: inputNewPassword.value,
+                passWord: inputNewPassword.value
             } 
             
             //push o spara
