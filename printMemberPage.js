@@ -5,10 +5,8 @@ export default function printMemberPage () {
     content.innerHTML = " ";
     footer.innerHTML = " ";
 
-    //KVAR! att lösa: koppla rätt namn-(userName) vid inlogg
-
-    //let name = localStorage.setItem("userIsLoggedIn", inputUserName.value);
-    content.innerHTML = "Voff and welcome" + " " + name + " " + "to your member page! ";
+    let name = JSON.parse(localStorage.getItem("userIsLoggedIn"));
+    content.innerText = `Voff and welcome ${name} to your member page!`;
     
     //Log out Btn 
     let logOutButton = document.createElement("button");

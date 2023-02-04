@@ -43,8 +43,8 @@ export default function createNewMember () {
     saveNewUserBtn.addEventListener("click", () => { 
         //hämta
         let users = JSON.parse(localStorage.getItem("users")); 
-        let validNewInput = inputNewUserName //=! users.userName
-        if (validNewInput) {
+        let validNewInput = inputNewPassword;
+        if (validNewInput.length >5 && validNewInput.length <21 ) { // != users.passWord) {
                 
             //ändra 
             let newMember = {    
@@ -60,7 +60,7 @@ export default function createNewMember () {
             printHomePage(); 
     
         } else {
-            {alert("Ops something went wrong")}; 
+            {alert("Your password must be between 6 to 20 characters")}; 
             printHomePage(); 
         }
     });    

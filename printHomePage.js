@@ -44,14 +44,16 @@ export default function printHomePage () {
     logInBtn.addEventListener("click", () =>  {   
 
         let users = JSON.parse(localStorage.getItem("users"));
-        let user = users.find(user => user.userName === inputUserName.value);//  && user.passWord === inputPassWord.value);
+        let userN = users.find(user => user.userName === inputUserName.value);
+        let userP = users.find(user => user.passWord === inputPassword.value);
         
-         //kolla password också..!!
+         //OBS alla kan logga in m varadnras lösen o tvärtom!
         
-        if (user) { 
+        if (userN && userP) { 
             
-            let userIsLoggedIn = inputUserName.value; // || inputNewUserName.value;
+            let userIsLoggedIn = inputUserName.value;
             localStorage.setItem("userIsLoggedIn", JSON.stringify(userIsLoggedIn)); 
+            console.log("userIsLoggedIn", userIsLoggedIn)
             printMemberPage(); 
         }
         else  {
