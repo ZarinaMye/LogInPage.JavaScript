@@ -24,7 +24,7 @@ export default function createNewMember () {
     //Input password
     let inputNewPassword = document.createElement("input");
     inputNewPassword.id = "inputNewPassword";
-    inputNewPassword.type = "password";
+    inputNewPassword.type = "text";
     content.appendChild(inputNewPassword);
     //LogIn Btn
     let saveNewUserBtn = document.createElement("button");
@@ -44,7 +44,7 @@ export default function createNewMember () {
         //hämta
         let users = JSON.parse(localStorage.getItem("users")); 
         let validNewInput = inputNewPassword;
-        if (validNewInput.length >5 && validNewInput.length <21 ) { // != users.passWord) {
+        if (validNewInput.value.length >5 && validNewInput.value.length <21 ) { 
                 
             //ändra 
             let newMember = {    
@@ -59,6 +59,10 @@ export default function createNewMember () {
             {alert("Your username and password have been saved, please log in")};
             printHomePage(); 
     
+        /* } else if (validNewInput.value === users.passWord ){
+            {alert("Your are already a member, please log in")}; 
+            printHomePage();  */
+
         } else {
             {alert("Your password must be between 6 to 20 characters")}; 
             printHomePage(); 
