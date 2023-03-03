@@ -6,6 +6,7 @@ import printWrongPage from "./printWrongPage.js";
 export default function printHomePage () { 
     header.innerHTML = " ";
     content.innerHTML = " ";
+    showToDo.innerHTML = " ";
     footer.innerHTML = " ";
 
     //Label username

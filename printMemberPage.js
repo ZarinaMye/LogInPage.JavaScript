@@ -1,4 +1,5 @@
 import printHomePage from "./printHomePage.js";
+import printToDoList from "./printTodoList.js";
 
 export default function printMemberPage () { 
     header.innerHTML = " ";
@@ -7,6 +8,8 @@ export default function printMemberPage () {
 
     let name = JSON.parse(localStorage.getItem("userIsLoggedIn"));
     content.innerText = `Voff and welcome ${name} to your member page!`;
+    
+    printToDoList ();
     
     //Log out Btn 
     let logOutButton = document.createElement("button");

@@ -2,6 +2,6 @@ alla användare kan logga in med varandras lösen och tvärt om...
 hasha lösenord..ev
 skriva om users till object
 krav vid skapandet av ny medlemm, redan existerande funkar ej..
-lägg till en todolist för medlemmarna så de kan skriva i den..
+Todo list specifik för varje medlem, nu får alla samma...
 css
 
