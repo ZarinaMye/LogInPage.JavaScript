@@ -1,43 +1,45 @@
 import printHomePage from "./printHomePage.js";
 
-//vy för att skapa ny användare
 export default function createNewMember () {
     header.innerHTML = " ";
     content.innerHTML = " ";
     footer.innerHTML = " ";
 
-    //H1
     let logo = document.createElement("h1");
     logo.innerHTML = "Doglist";
     logo.id = "logo";
     content.appendChild(logo);
 
-    //Label create username
     let labelNewUsername = document.createElement("Label");
     labelNewUsername.id = "labelNewUsername";
     labelNewUsername.innerText = "Choose a username: ";
     content.appendChild(labelNewUsername);
-    //Input new username
+  
     let inputNewUserName = document.createElement("input");
     inputNewUserName.id = "inputNewUserName";
     inputNewUserName.type = "text";
     content.appendChild(inputNewUserName);
-    //Label create password
+   
     let labelNewPassword = document.createElement("Label");
     labelNewPassword.id = "labelNewPassword";
     labelNewPassword.innerText = "Choose a password: ";
     content.appendChild(labelNewPassword);
-    //Input password
+ 
     let inputNewPassword = document.createElement("input");
     inputNewPassword.id = "inputNewPassword";
     inputNewPassword.type = "text";
     content.appendChild(inputNewPassword);
-    //LogIn Btn
+    
     let saveNewUserBtn = document.createElement("button");
     saveNewUserBtn.innerText = "Save"
     saveNewUserBtn.id = "saveNewUserBtn";
     content.appendChild(saveNewUserBtn);
-    //Cancel Btn
+
+    const dogPicHome = new Image(130, 200);
+    dogPicHome.src= "./img/dogHome.png"
+    dogPicHome.id = "dogPicHome";
+    footer.appendChild(dogPicHome);
+
     let cancelButton = document.createElement("button");
     cancelButton.innerText = "Cancel"
     cancelButton.id ="cancelButton";

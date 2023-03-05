@@ -39,9 +39,9 @@ export default function printToDoList() {
 
         let toDoSheet = JSON.parse(localStorage.getItem("toDoSheet")); //Hämta
    
-        let newToDoPost = {   //objectet som ska sparas i arrayen, som då blir objectarray
+        let newToDoPost = {  
             id: toDoSheet.length +1,
-            toDoTask: inputToDo.value //ikon: contentInput.value//en ikon för att ta bort KVAR ATT FIXA!!
+            toDoTask: inputToDo.value 
         }
     
         toDoSheet.push(newToDoPost); //Ändra
@@ -51,20 +51,14 @@ export default function printToDoList() {
         printToDo();
     })
 
-
-    function printToDo() {  //render funktion (från react)  //För att printa på sida 
-        showToDo.innerHTML = " "; //om vi vill tömma sidan först...
+    function printToDo() {  
+        showToDo.innerHTML = " "; 
 
         let toDoSheet = JSON.parse(localStorage.getItem("toDoSheet")); //Hämta
    
         toDoSheet.map(todo => {
-             //skapa element
-            let toDoBox = document.createElement("ul"); // om du vill skapa komplicerat, adjecentHTML bra om bara en enkel rad ska in i doc
-            //ge elemenetet attribut
-            //toDoBox.style.border = "1px solid black"; //diaryBox.claslist ="namnClass" för att styla i css, #namnClass
-            //toDoBox.style.padding = "15px";
-            //toDoBox.style.marginLeft = "460px";
-                        
+             
+            let toDoBox = document.createElement("ul");          
             toDoBox.id = todo.id;
             toDoBox.innerHTML ="<li id="+ todo.id +">" + todo.toDoTask + "</li>";
             showToDo.appendChild(toDoBox) // För att skicka ut, raden ovan, på sidan
@@ -79,7 +73,6 @@ export default function printToDoList() {
 
         //Ändra mha Filter (filterar så det som Inte (!==) stämmer sparas, resten tas bort)
         toDoSheet = toDoSheet.filter(newToDoPost => newToDoPost.id != event.target.id)
-        //console.log("toDoSheet after filter", toDoSheet);
     
         //Spara
         localStorage.setItem("toDoSheet", JSON.stringify(toDoSheet));

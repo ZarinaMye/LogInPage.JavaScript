@@ -8,7 +8,6 @@ export default function printMemberPage () {
     content.innerHTML = " ";
     footer.innerHTML = " ";
 
-    //H1
     let logo = document.createElement("h1");
     logo.innerHTML = "Doglist";
     logo.id = "logo";
@@ -37,13 +36,11 @@ export default function printMemberPage () {
     
     printToDoList ();
     
-    //Log out Btn 
     let logOutButton = document.createElement("button");
     logOutButton.innerText = "Log out"
     logOutButton.id = "logOutBtn";
     header.appendChild(logOutButton);
 
-    //Radera inlogg ur ls
     logOutButton.addEventListener("click", () => {
         localStorage.removeItem("userIsLoggedIn");
         printHomePage(); 

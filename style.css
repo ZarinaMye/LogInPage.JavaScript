@@ -17,9 +17,10 @@ header {
 #logo {
     position: absolute;
     color: white;
-    left: 160px;
-    top: 70px;
+    left: 140px;
+    top: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
     text-shadow: 2px 2px blue;
 }
 #labelUsername {
