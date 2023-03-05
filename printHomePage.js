@@ -11,6 +11,12 @@ export default function printHomePage () {
     showToDo.innerHTML = " ";
     footer.innerHTML = " ";
 
+    //H1
+    let logo = document.createElement("h1");
+    logo.innerHTML = "Doglist";
+    logo.id = "logo";
+    content.appendChild(logo);
+
     //Label username
     let labelUsername = document.createElement("Label");
     labelUsername.id = "labelUsername";
@@ -42,8 +48,13 @@ export default function printHomePage () {
     newMemberBtn.id = "newMemberBtn";
     content.appendChild(newMemberBtn);
 
+    let homeHelloText = document.createElement("p");
+    homeHelloText.innerHTML = "Hello!";
+    homeHelloText.id = "homeHelloText";
+    content.appendChild(homeHelloText);
+
     let homeText = document.createElement("p");
-    homeText.innerHTML = "Hello! <br> If you are a member you know what to do, if not please sign up.";
+    homeText.innerHTML = "If you are a member you know what to do, if not please sign up.";
     homeText.id = "homeText";
     content.appendChild(homeText);
 

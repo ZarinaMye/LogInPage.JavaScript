@@ -8,8 +8,13 @@ export default function printMemberPage () {
     content.innerHTML = " ";
     footer.innerHTML = " ";
 
-    let name = JSON.parse(localStorage.getItem("userIsLoggedIn"));
+    //H1
+    let logo = document.createElement("h1");
+    logo.innerHTML = "Doglist";
+    logo.id = "logo";
+    content.appendChild(logo);
 
+    let name = JSON.parse(localStorage.getItem("userIsLoggedIn"));
     let welcomeText = document.createElement("p");
     welcomeText.innerText = `Voff and welcome ${name} to your member page!`;
     welcomeText.id = "welcomeText"
@@ -38,7 +43,7 @@ export default function printMemberPage () {
     logOutButton.id = "logOutBtn";
     header.appendChild(logOutButton);
 
-    //radera inlogg ur ls
+    //Radera inlogg ur ls
     logOutButton.addEventListener("click", () => {
         localStorage.removeItem("userIsLoggedIn");
         printHomePage(); 

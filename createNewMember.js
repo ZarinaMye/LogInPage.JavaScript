@@ -6,9 +6,15 @@ export default function createNewMember () {
     content.innerHTML = " ";
     footer.innerHTML = " ";
 
+    //H1
+    let logo = document.createElement("h1");
+    logo.innerHTML = "Doglist";
+    logo.id = "logo";
+    content.appendChild(logo);
+
     //Label create username
     let labelNewUsername = document.createElement("Label");
-    labelNewUsername.id = "labelUsername";
+    labelNewUsername.id = "labelNewUsername";
     labelNewUsername.innerText = "Choose a username: ";
     content.appendChild(labelNewUsername);
     //Input new username
@@ -34,7 +40,9 @@ export default function createNewMember () {
     //Cancel Btn
     let cancelButton = document.createElement("button");
     cancelButton.innerText = "Cancel"
+    cancelButton.id ="cancelButton";
     content.appendChild(cancelButton);
+
     cancelButton.addEventListener("click", () => {
         printHomePage(); 
     });
