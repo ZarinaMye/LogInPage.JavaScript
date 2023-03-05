@@ -1,3 +1,5 @@
+const dogPic = document.getElementById("dogPic")
+
 import printMemberPage from "./printMemberPage.js";
 import createNewMember from "./createNewMember.js";
 import printWrongPage from "./printWrongPage.js";
@@ -41,7 +43,12 @@ export default function printHomePage () {
     header.appendChild(newMemberBtn);
 
     content.innerHTML = "Hello! <br> If you are a member you know what to do, if not please sign up.";
-    
+
+    const dogPicHome = new Image(130, 200);
+    dogPicHome.src= "./img/dogHome.png"
+    dogPicHome.id = "dogPicHome";
+    footer.appendChild(dogPicHome);
+
     logInBtn.addEventListener("click", () =>  {   
 
         let users = JSON.parse(localStorage.getItem("users"));

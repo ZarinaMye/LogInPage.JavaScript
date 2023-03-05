@@ -1,3 +1,97 @@
 body {
-    background-color: aqua;
+    font-family: Roboto;
+    color: white;
+    font-size: medium;
+    background-image: url(./background.jpg);
+}
+header {
+    background-color: rgb(1, 28, 17, 0.85);
+    margin-top:10px;
+    height: 165px;
+    display: grid;
+    grid-auto-flow: row;
+    border-radius: 25px 25px 5px 5px;
+    box-shadow: 3px 3px 5px rgb(167, 163, 163, 0.5); 
+}
+#labelUsername {
+    position: absolute;
+    color: white;
+    right: 190px;
+    top: 30px;
+}
+#inputUserName {
+    position: absolute;
+    right: 100px;
+    top: 50px;
+}
+#labelPassword {
+    position: absolute;
+    color: white;
+    right: 190px;
+    top: 80px;
+}
+#inputPassword {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+#logInBtn {
+    position: absolute;
+    right: 100px;
+    top: 137px;
+}
+#newMemberBtn {
+    position: absolute;
+    left: 400px;
+    top: 240px;
+}
+#logOutBtn {
+    position: absolute;
+    right: 100px;
+    top: 137px;
+}
+#welcomeText {
+    position: absolute;
+    font-size: large;
+    margin-left: 50px;
+    top: 100px
+}
+#todoText {
+    position: absolute;
+    margin-left: 50px;
+    top: 270px
+}
+#ToDo {
+    position: absolute;
+    margin-left: 500px;
+    top: 230px
+}
+#inputToDo {
+    position: absolute;
+    margin-left: 50px;
+    top: 320px
+}
+#saveToDoBtn {
+    position: absolute;
+    margin-left: 230px;
+    top: 320px
+
+}
+#dogPicHome, #dogPicMember {
+    position:fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+footer {
+    background-color: rgb(1, 28, 17, 0.85);
+    margin-top: 292px;
+    height: 100px;
+    display: flex;
+    border-radius: 5px 5px 25px 25px;
+    box-shadow: 3px 3px 5px rgb(167, 163, 163, 0.5); 
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
 }

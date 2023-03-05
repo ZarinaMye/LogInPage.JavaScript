@@ -1,7 +1,8 @@
+Fortsätta att göra..
 alla användare kan logga in med varandras lösen och tvärt om...
 hasha lösenord..ev
 skriva om users till object
-krav vid skapandet av ny medlemm, redan existerande funkar ej..
+krav vid skapandet av ny medlemm, redan existerande, funkar ej..
 Todo list specifik för varje medlem, nu får alla samma...
 css
 

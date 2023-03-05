@@ -2,6 +2,8 @@ const showToDo = document.getElementById("showToDo")
 
 export default function printToDoList() {
     
+    //måste skapa en array? ell nått med alla todolist i..
+    
     let toDoSheet = []; //array dit allt vi skriver ska sparas
  
     if (!localStorage.getItem("toDoSheet")) {
@@ -25,10 +27,12 @@ export default function printToDoList() {
 
     let inputToDo = document.createElement("input"); 
     inputToDo.type = "text";
+    inputToDo.id ="inputToDo";
     content.appendChild(inputToDo);
 
     let saveToDoBtn = document.createElement("button"); 
     saveToDoBtn.innerText = "Save new task";
+    saveToDoBtn.id = "saveToDoBtn";
     content.appendChild(saveToDoBtn);
 
     saveToDoBtn.addEventListener("click", () => {
@@ -60,7 +64,7 @@ export default function printToDoList() {
             //toDoBox.style.border = "1px solid black"; //diaryBox.claslist ="namnClass" för att styla i css, #namnClass
             //toDoBox.style.padding = "15px";
             //toDoBox.style.margin = "10px";
-            //toDoBox.id = todo.id;
+            toDoBox.id = todo.id;
             toDoBox.innerHTML ="<li id="+ todo.id +">" + todo.toDoTask + "</li>";
             showToDo.appendChild(toDoBox) // För att skicka ut, raden ovan, på sidan
         })
