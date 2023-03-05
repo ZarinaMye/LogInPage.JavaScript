@@ -16,9 +16,14 @@ export default function printMemberPage () {
     content.appendChild(welcomeText);
 
     let todoText = document.createElement("p");
-    todoText.innerText = `Create your own ToDo list`;
+    todoText.innerText = `Create your own to-do list by entering tasks below`;
     todoText.id = "todoText"
     content.appendChild(todoText);
+
+    let todoTextDel = document.createElement("p");
+    todoTextDel.innerText = `To delete a task, click on it`;
+    todoTextDel.id = "todoTextDel"
+    content.appendChild(todoTextDel);
 
     const dogPicMember = new Image(130, 190);
     dogPicMember.src= "./img/dogMember.png"

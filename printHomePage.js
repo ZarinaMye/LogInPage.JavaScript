@@ -40,9 +40,12 @@ export default function printHomePage () {
     var newMemberBtn = document.createElement("button");
     newMemberBtn.innerText = "New Member?";
     newMemberBtn.id = "newMemberBtn";
-    header.appendChild(newMemberBtn);
+    content.appendChild(newMemberBtn);
 
-    content.innerHTML = "Hello! <br> If you are a member you know what to do, if not please sign up.";
+    let homeText = document.createElement("p");
+    homeText.innerHTML = "Hello! <br> If you are a member you know what to do, if not please sign up.";
+    homeText.id = "homeText";
+    content.appendChild(homeText);
 
     const dogPicHome = new Image(130, 200);
     dogPicHome.src= "./img/dogHome.png"

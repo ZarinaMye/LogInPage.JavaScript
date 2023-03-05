@@ -2,6 +2,7 @@ import printHomePage from "./printHomePage.js";
 
 //vy för felmeddelande
 export default function printWrongPage () { 
+    content.innerHTML = " ";
 
     content.innerHTML = "Sorry, invalid username and/or password! ";
     

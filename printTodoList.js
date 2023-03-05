@@ -53,7 +53,7 @@ export default function printToDoList() {
 
 
     function printToDo() {  //render funktion (från react)  //För att printa på sida 
-        showToDo.innerHTML = "" //om vi vill tömma sidan först...
+        showToDo.innerHTML = " "; //om vi vill tömma sidan först...
 
         let toDoSheet = JSON.parse(localStorage.getItem("toDoSheet")); //Hämta
    
@@ -63,14 +63,15 @@ export default function printToDoList() {
             //ge elemenetet attribut
             //toDoBox.style.border = "1px solid black"; //diaryBox.claslist ="namnClass" för att styla i css, #namnClass
             //toDoBox.style.padding = "15px";
-            //toDoBox.style.margin = "10px";
+            //toDoBox.style.marginLeft = "460px";
+                        
             toDoBox.id = todo.id;
             toDoBox.innerHTML ="<li id="+ todo.id +">" + todo.toDoTask + "</li>";
             showToDo.appendChild(toDoBox) // För att skicka ut, raden ovan, på sidan
         })
     } 
 
-    showToDo.addEventListener("click", (event) => { //callback funktion
+    showToDo.addEventListener("click", (event) => { //callback funktion, ta bort todo item
         //console.log("click", event.target.id);
 
         //Hämta
