@@ -16,7 +16,7 @@ header {
 }
 #logo {
     position: absolute;
-    color: white;
+    color: rgba(255, 255, 255, 0.863);
     left: 140px;
     top: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -55,6 +55,11 @@ header {
 }
 #logInBtn:hover {
     color: blue;
+    background-color: grey;
+}
+#logInBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
 }
 #homeHelloText {
     position: absolute;
@@ -76,6 +81,11 @@ header {
 }
 #newMemberBtn:hover {
     color: blue;
+    background-color: grey;
+}
+#newMemberBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
 }
 #logOutBtn {
     position: absolute;
@@ -85,6 +95,11 @@ header {
 }
 #logOutBtn:hover {
     color: blue;
+    background-color: grey;
+}
+#logOutBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
 }
 #welcomeText {
     position: absolute;
@@ -116,6 +131,11 @@ header {
 }
 #saveToDoBtn:hover {
     color: blue;
+    background-color: grey;
+}
+#saveToDoBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
 }
 #saveToDoBtn {
     position: absolute;
@@ -164,13 +184,28 @@ ul {
 }
 #cancelButton:hover {
     color: blue;
+    background-color: grey;
+}
+#cancelButton:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
 }
 #saveNewUserBtn:hover {
     color: blue;
+    background-color: grey;
+}
+#saveNewUserBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
 }
 #cancelBtn:hover {
     color: blue;
-}    
+    background-color: grey;
+}  
+#cancelBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(3px);
+}  
 #invalidText {
     position: absolute;
     font-size: large;
