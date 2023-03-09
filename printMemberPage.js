@@ -6,6 +6,7 @@ import printToDoList from "./printTodoList.js";
 export default function printMemberPage () { 
     header.innerHTML = " ";
     content.innerHTML = " ";
+    showToDo.innerHTML = " ";
     footer.innerHTML = " ";
 
     let logo = document.createElement("h1");

@@ -58,10 +58,12 @@ export default function printToDoList() {
    
         toDoSheet.map(todo => {
              
-            let toDoBox = document.createElement("ul");          
+            let toDoBox = document.createElement("div"); 
+            toDoBox.style.backgroundColor = "rgb(5, 36, 5)";
+            toDoBox.style.boxShadow = "3px 3px 5px rgb(167, 163, 163, 0.5)"; 
             toDoBox.id = todo.id;
             toDoBox.innerHTML ="<li id="+ todo.id +">" + todo.toDoTask + "</li>";
-            showToDo.appendChild(toDoBox) // För att skicka ut, raden ovan, på sidan
+            showToDo.appendChild(toDoBox) 
         })
     } 
 

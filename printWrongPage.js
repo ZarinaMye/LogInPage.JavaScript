@@ -2,6 +2,7 @@ import printHomePage from "./printHomePage.js";
 
 export default function printWrongPage () { 
     content.innerHTML = " ";
+    showToDo.innerHTML = " ";
 
     let logo = document.createElement("h1");
     logo.innerHTML = "Doglist";
@@ -12,6 +13,10 @@ export default function printWrongPage () {
     invalidText.innerText = `Sorry, invalid username and/or password!`;
     invalidText.id = "invalidText"
     content.appendChild(invalidText);
+
+    let divTextBox = document.createElement("div");
+    divTextBox.id = "divTextBox"
+    content.appendChild(divTextBox);
 
     const dogPicHome = new Image(130, 200);
     dogPicHome.src= "./img/dogHome.png"
